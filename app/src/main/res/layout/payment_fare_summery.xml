@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/paymentfare_swipe_refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:id="@+id/layout_jobfare_header"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colour_white">
+
+            <RelativeLayout
+                android:id="@+id/layout_jobfare_back"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/back_jobfare"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    app:srcCompat="@drawable/back_arrow_black" />
+
+            </RelativeLayout>
+
+            <core.Widgets.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/jobfare_header_label"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/aboutus_toolbar_shadow_layout"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_below="@+id/layout_jobfare_header"
+            android:background="@xml/toolbar_shadow" />
+
+        <RelativeLayout
+            android:id="@+id/layout_faresummery_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/layout_fare_summery_btns"
+            android:layout_below="@+id/aboutus_toolbar_shadow_layout"
+            android:layout_marginTop="0dp"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/layout_paymentfare_jobs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <core.Widgets.CustomTextView
+                    android:id="@+id/Tvpaymentfare_jobId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/jobfare_jobid_label"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <core.Widgets.CustomTextView
+                    android:id="@+id/paymentfare_jobId_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/Tvpaymentfare_jobId"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+                <core.Widgets.CustomTextView
+                    android:id="@+id/Tvpaymentfare_job_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/Tvpaymentfare_jobId"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:textColor="#4e4e4e"
+                    android:textSize="20sp" />
+
+
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/cancelreason_listView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_paymentfare_jobs"
+                android:divider="@null">
+
+            </ListView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_fare_summery_btns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <LinearLayout
+                android:id="@+id/layout_fare_summery2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="#ffffff"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/Bt_faresummery_requestpaymet"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:layout_weight="1"
+                    android:background="@color/appmain_color"
+                    android:text="@string/paymentfar_requestpayment_label"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff"
+                    android:textSize="17sp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/Bt_faresummery_receivecash"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/receive_cash_layout"
+                    android:text="@string/paymentfar_receivecash_label"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_payment_noInternet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_jobfare_header"
+            android:visibility="gone">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <include
+                    android:id="@+id/payment_fare_nointernet_include"
+                    layout="@layout/no_internet_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </ScrollView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutpayment_nofare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_jobfare_header"
+            android:visibility="gone">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <include
+                    android:id="@+id/payment_fare_nofare_include"
+                    layout="@layout/nolistdatas_layout_witout_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hoperlady.app.NewLoginHomePageActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/mobile_number_RL"
+        android:background="@color/loginpage_bg"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/splace_image_IV"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_60sdp"
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:background="@drawable/handyexpertslogo" />
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/app_name_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_splace_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/partner_name_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:text="@string/app_splace_experts"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/app_image_IV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_below="@+id/splace_image_IV"
+            android:background="@drawable/app_home_login_page" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mobile_number_RL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_15sdp"
+            android:orientation="vertical">
+
+            <core.Widgets.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your Home Services Expert"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18sdp" />
+
+            <RelativeLayout
+                android:id="@+id/mobile_number_indiviale_RL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/flag_image_IV"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/flag_in" />
+
+                <core.Widgets.CustomTextView
+                    android:id="@+id/country_code_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_toEndOf="@+id/flag_image_IV"
+                    android:gravity="center|start"
+                    android:text="+91"
+                    android:textColor="@color/black_de"
+                    android:textSize="19dp" />
+
+                <core.Widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_toEndOf="@+id/country_code_TV"
+                    android:gravity="start|center"
+                    android:text="@string/newloginpagesecond_activity_enter_mobile_no_txt"
+                    android:textSize="17dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

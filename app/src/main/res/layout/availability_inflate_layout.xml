@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/availability_inflate_layout_main_circ_LAY"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:background="@drawable/avail_background"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/Days_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="monday"
+            android:textColor="@color/black_de"
+            android:textSize="12sp" />
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/Selected_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@string/text_not_selected"
+            android:textColor="#F61317"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

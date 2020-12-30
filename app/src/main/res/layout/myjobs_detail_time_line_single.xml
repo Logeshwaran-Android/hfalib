@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <core.Widgets.CustomTextView
+        android:id="@+id/myJob_detail_status_single_date_textView"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:textColor="#9b9999"
+        android:textSize="12sp" />
+
+    <View
+        android:id="@+id/verticalTempView"
+        android:layout_width="5dp"
+        android:layout_height="@dimen/_8sdp"
+        android:layout_marginStart="19dp"
+        android:layout_marginBottom="@dimen/_minus1sdp"
+        android:layout_toEndOf="@+id/myJob_detail_status_single_date_textView"
+        android:background="@color/appmain_color" />
+
+    <ImageView
+        android:id="@+id/myJob_detail_status_single_report_imageView"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/verticalTempView"
+        android:layout_marginStart="11dp"
+        android:layout_toEndOf="@+id/myJob_detail_status_single_date_textView"
+        android:background="@drawable/time_line_circle" />
+
+    <View
+        android:id="@+id/myJob_detail_requestSubmitted_view"
+        android:layout_width="20dp"
+        android:layout_height="5dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/myJob_detail_status_single_report_imageView"
+        android:background="@color/appmain_color"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/verticalLineView"
+        android:layout_width="5dp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_below="@+id/myJob_detail_status_single_report_imageView"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="@dimen/_minus3sdp"
+        android:layout_toEndOf="@+id/myJob_detail_status_single_date_textView"
+        android:background="@color/appmain_color" />
+
+    <core.Widgets.CustomTextView
+        android:id="@+id/myJob_detail_status_single_status_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_marginEnd="2dp"
+        android:layout_toEndOf="@+id/myJob_detail_requestSubmitted_view"
+        android:textColor="#4e4e4e"
+        android:textSize="15sp" />
+
+</RelativeLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="app_color">#12295b</color>
+    <color name="app_background_color">#E43e40</color>
+    <color name="app_background_btn_color">#ffffff</color>
+    <color name="app_background_facebook_btn_color">#3d4c77</color>
+    <color name="app_background_login_btn_color">#12295b</color>
+    <color name="app_chat_header_background_color">#075e55</color>
+
+    <color name="mainpage_background_color">#fdca95</color>
+
+    <!--App Main Color-->
+    <color name="appmain_color">#12295b</color>
+    <color name="appmain_color_dark">#12295b</color>
+    <color name="appmain_second_color">#12295b</color>
+    <color name="colorPrimary">#12295b</color>
+    <color name="colorPrimaryDark">#12295b</color>
+    <color name="colour_white">#FFFFFF</color>
+
+    <color name="loginpage_bg">#a5a6c2</color>
+
+    <color name="app_cancel_btn_color">#cc0000</color>
+    <color name="app_startjob_btn_color">#097054</color>
+    <color name="app_startoff_btn_color">#6c3a02</color>
+    <color name="app_acceptf_btn_color">#74d600</color>
+    <color name="layout_moreinfo_btn_color">#711da9</color>
+    <!--<color name="layout_arrived_btn_color">#460137</color>-->
+    <color name="layout_arrived_btn_color">#12295b</color>
+    <color name="layout_completejob_btn_color">#005502</color>
+    <color name="layout_payment_btn_color">#1b9469</color>
+    <color name="white_color">#FFFFFF</color>
+
+    <color name="app_color_button">#ccF05253</color>
+
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#ffffff</color>
+    <color name="colorAccent">#934379</color>
+    <color name="colorAccenttab">#ffffff</color>
+    <color name="app_tab_background">#CDB99C</color>
+
+    resources>
+    <color name="guillotine_background">#ff4546</color>
+    <color name="guillotine_background_dark">#ff4546</color>
+    <color name="selected_item_color">#30d1d5</color>
+    <color name="checkbox_color">#06b1c4</color>
+
+    <color name="resend_code_color">#056f7b</color>
+
+
+    <color name="colorPrimary_tab">#cdcdcd</color>
+    <color name="colorPrimaryDark_tab">#cdcdcd</color>
+    <color name="textColorPrimary_tab">#FFFFFF</color>
+    <color name="windowBackground_tab">#FFFFFF</color>
+
+
+    <!-- Transparent theme -->
+    <color name="custom_theme_color">#E6ffffff</color>
+    <color name="pushnotification_custom_theme_color">#80000000</color>
+    <color name="pushnotification_custom_payment_theme_color">#F2ffffff</color>
+
+
+    <color name="black_semi_transparent">#B2000000</color>
+    <color name="background">#e5e5e5</color>
+    <color name="half_black">#808080</color>
+    <color name="white">#fafafa</color>
+    <color name="full_white">#ffffff</color>
+    <color name="white_pressed">#f1f1f1</color>
+    <color name="pink">#e91e63</color>
+    <color name="pink_pressed">#ec407a</color>
+    <color name="blue_semi_transparent">#805677fc</color>
+    <color name="blue_semi_transparent_pressed">#80738ffe</color>
+    <color name="progresscolor">#900c3e</color>
+
+
+    <color name="card_viewgrey">#ECECEC</color>
+    <color name="grey_text">#747474</color>
+
+    <color name="gray">@android:color/darker_gray</color>
+
+    <color name="tab_color">#F5F5F5</color>
+    <color name="lightBlack">#90000000</color>
+
+    <color name="red_color">#d90303</color>
+    <color name="red_middle_color">#ea2929</color>
+
+    <color name="darker_gray_app">#818181</color>
+
+    <color name="home_page_last_task_color">#22CDFA</color>
+    <color name="accent_600">#1ba649</color>
+
+    <color name="yellow_2">#FFBB00</color>
+    <color name="scoot_yellow_100">#FFD442</color>
+    <color name="dark_yellow">#C07927</color>
+
+    <color name="tracking_btn_bg_light_color">#9f6767</color>
+    <color name="tracking_btn_bg_color">#401c1c</color>
+
+    <color name="category_bg_item1_color">#17c7d7</color>
+    <color name="category_bg_item2_color">#5cb149</color>
+    <color name="category_bg_item3_color">#ff7226</color>
+
+</resources>

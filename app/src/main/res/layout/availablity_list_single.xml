@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/_5sdp">
+
+    <RelativeLayout
+        android:id="@+id/daysRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_2sdp"
+        android:paddingEnd="@dimen/_10sdp">
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/titleDayNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/timeShowListTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleDayNameTV"
+            android:layout_marginEnd="@dimen/_65sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:singleLine="true"
+            android:text="@string/availability_new_custom_page_adapter_not_selected_availability_single"
+            android:textColor="#636262"
+            android:textStyle="bold" />
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/viewMoreTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/titleDayNameTV"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:singleLine="true"
+            android:text="@string/availability_new_custom_page_adapter_view_more_single"
+            android:textColor="@color/appmain_color"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/addAndEditNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/availability_new_custom_page_adapter_add_single"
+            android:textColor="#8e0505"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_below="@+id/daysRL"
+        android:background="@color/gray" />
+
+</RelativeLayout>

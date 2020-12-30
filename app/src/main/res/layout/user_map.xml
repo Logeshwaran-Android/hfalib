@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rentals_layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentTop="true">
+
+
+        <RelativeLayout
+            android:id="@+id/rentals_header_back_layout"
+            android:layout_width="55dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:tint="@color/black_color"
+                android:layout_centerInParent="true"
+                android:backgroundTint="@color/black_color"
+                android:background="@drawable/back_arrow_black"/>
+
+
+
+        </RelativeLayout>
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/rentals_textview_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginLeft="@dimen/_50sdp"
+            android:text="@string/tracklocation"
+            android:textColor="@color/black_color"
+            android:textSize="@dimen/_15sdp" />
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+        <core.Widgets.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:text="@string/booking_location"
+            android:textColor="@color/black_color"
+            android:textSize="@dimen/_14sdp" />
+    <core.Widgets.CustomTextView
+        android:id="@+id/userbookinglocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:text=""
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/_12sdp" />
+
+
+
+
+</LinearLayout>
+
+        <fragment
+            android:id="@+id/school_rute_map"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </fragment>
+
+        <core.Widgets.CircularImageView
+            android:id="@+id/track_ride"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="-65dp"
+            android:visibility="gone"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/navigation"
+            android:elevation="3dp" />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

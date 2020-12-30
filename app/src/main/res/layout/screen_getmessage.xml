@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/card_viewgrey">
+
+    <RelativeLayout
+        android:id="@+id/screen_getmessage_LAY_header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/colour_white">
+
+        <ImageView
+            android:id="@+id/screen_getmessage_IMG_back"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/pie_chart_text2_size"
+            android:background="@drawable/back_arrow_long"
+            android:backgroundTint="@color/black" />
+
+        <core.Widgets.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/drawer_list_chat_label"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/aboutus_toolbar_shadow_layout"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/screen_getmessage_LAY_header"
+        android:background="@xml/toolbar_shadow" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/screen_getmessage_LAY_swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/aboutus_toolbar_shadow_layout">
+
+        <ListView
+            android:id="@+id/screen_getmessage_LV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@android:color/transparent"
+            android:listSelector="@android:color/transparent" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.widget.CustomTextView
+        android:id="@+id/screen_getmessage_TXT_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Currently no messages found"
+        android:textColor="#4e4e4e"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/myJobs_noInternet_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/screen_getmessage_LAY_header"
+        android:background="#00000000"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <include
+                android:id="@+id/myJobs_toolbar_container_header"
+                layout="@layout/no_internet_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp" />
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

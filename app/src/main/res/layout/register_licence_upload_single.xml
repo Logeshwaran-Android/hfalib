@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/uploadBottumSheetRL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <core.Widgets.CustomTextViewThinBold
+        android:id="@+id/licenceTitleNameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/black_color"
+        android:text=""/>
+    <ImageView
+        android:id="@+id/mandatory_icon"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/licenceTitleNameTV"
+        android:layout_marginLeft="5dp"
+        app:srcCompat="@drawable/mandatory_icon"></ImageView>
+
+    <TextView
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/licenceTitleNameTV"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="4dp"
+        android:text="Upload File"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/uploadImageRL"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_below="@+id/view1"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/borderdocument"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/tempImageRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/tempImageIV"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:background="@drawable/drivinglic" />
+        </RelativeLayout>
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/licenceUploadMessageTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tempImageRL"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:hint="Upload your picture" />
+
+        <ImageView
+            android:id="@+id/choosedImageIV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_10sdp"
+            android:scaleType="fitCenter"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/expirationDateLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/uploadImageRL"
+        android:layout_marginStart="16dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <core.Widgets.CustomTextViewThinBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_licence_upload_adapter_expiration_date"
+            android:textColor="@color/black_color" />
+
+        <RelativeLayout
+            android:id="@+id/datePickerRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:orientation="horizontal">
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/expirationDateTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/calenderIV"
+                android:text="@string/register_licence_upload_adapter_select_date"
+                android:textColor="@color/black_color" />
+
+            <ImageView
+                android:id="@+id/calenderIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/small_calendar" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/expirationDateLL"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/black_color"
+        android:visibility="gone" />
+
+</RelativeLayout>

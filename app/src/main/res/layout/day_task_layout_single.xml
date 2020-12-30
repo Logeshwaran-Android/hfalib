@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingEnd="@dimen/_5sdp"
+            android:paddingStart="@dimen/_5sdp">
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/bookingIdTileTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/jobslist_text_booking_id"
+                android:textColor="@color/black_color"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/bookingIdTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_5sdp"
+                android:text=""
+                android:textColor="@color/black_color"
+                app:layout_constraintBottom_toBottomOf="@+id/bookingIdTileTV"
+                app:layout_constraintStart_toEndOf="@+id/bookingIdTileTV"
+                app:layout_constraintTop_toTopOf="@+id/bookingIdTileTV" />
+
+            <core.Widgets.CustomTextViewBold
+                android:id="@+id/categoryNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:text=""
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bookingIdTileTV" />
+
+            <ImageView
+                android:id="@+id/timeIV"
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/time_date_xml"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/categoryNameTV" />
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/dateTimeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:paddingStart="@dimen/_5sdp"
+                android:text=""
+                android:textColor="@color/appmain_color"
+                android:textSize="13dp"
+                app:layout_constraintStart_toEndOf="@+id/timeIV"
+                app:layout_constraintTop_toBottomOf="@+id/categoryNameTV" />
+
+            <ImageView
+                android:id="@+id/addressIV"
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/location_address_xml"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/timeIV" />
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/addressTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:paddingStart="@dimen/_5sdp"
+                android:singleLine="false"
+                android:text=""
+                android:textColor="@color/black_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/addressIV"
+                app:layout_constraintTop_toBottomOf="@+id/dateTimeTV" />
+
+            <TextView
+                android:id="@+id/amountTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:maxWidth="@dimen/_80sdp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/_25sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.95"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bookingIdTV" />
+
+            <TextView
+                android:id="@+id/currencySymbolTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/appmain_color"
+                app:layout_constraintEnd_toStartOf="@+id/amountTV"
+                app:layout_constraintTop_toTopOf="@+id/amountTV" />
+
+            <TextView
+                android:id="@+id/taskEarningsLableTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/daytaskactivity_task_earnings_txt"
+                android:textColor="@color/appmain_color"
+                android:textSize="11dp"
+                app:layout_constraintEnd_toEndOf="@+id/amountTV"
+                app:layout_constraintStart_toStartOf="@+id/currencySymbolTV"
+                app:layout_constraintTop_toBottomOf="@+id/amountTV" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

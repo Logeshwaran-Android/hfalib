@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e5e6eb"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colour_white"
+        android:minHeight="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:id="@+id/layout_back_ongoingback"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="#00000000"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/back_ongoingback"
+                android:layout_width="25dp"
+                android:layout_height="26dp"
+                android:layout_centerInParent="true"
+                app:srcCompat="@drawable/back_arrow_black" />
+
+        </RelativeLayout>
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/myJob_detail_headerBar_title_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="13sp"
+            android:textStyle="normal" />
+
+        <RelativeLayout
+            android:id="@+id/tasker_location_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/myJob_detail_headerBar_title_textView"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.5">
+
+                    <core.Widgets.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Your"
+                        android:textColor="@color/gray"
+                        android:textSize="12sp"></core.Widgets.CustomTextView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1.5">
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/tasker_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="10dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#000000"
+                        android:textSize="12sp"></core.Widgets.CustomTextView>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/tasker_location_layout"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/track_location_background">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.5">
+
+                    <core.Widgets.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="User"
+                        android:textColor="@color/gray"
+                        android:textSize="12sp"></core.Widgets.CustomTextView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1.5">
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/user_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="10dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#000000"
+                        android:textSize="12sp"></core.Widgets.CustomTextView>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/aboutus_toolbar_shadow_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/header"
+        android:background="@xml/toolbar_shadow" />
+
+    <RelativeLayout
+        android:id="@+id/map_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_layout"
+        android:layout_below="@+id/aboutus_toolbar_shadow_layout"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp">
+
+        <fragment
+            android:id="@+id/myjob_ongoing_detail_map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/user_Destination_location"
+            android:clickable="false" />
+    </RelativeLayout>
+
+
+    <core.Widgets.CircularImageView
+        android:id="@+id/track_ride"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/map_layout"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="-25dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/navigation"
+        android:elevation="3dp" />
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:background="@drawable/tracking_duration_background">
+
+        <core.Widgets.RoundedImageView
+            android:id="@+id/user_photo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp" />
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/user_photo"
+            android:text="User Name"
+            android:textColor="#5d5d5d" />
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/user_photo"
+            android:text=""
+            android:textColor="@color/app_color"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/kilometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/time"
+            android:text=""
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+        <core.Widgets.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/time"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/user_photo"
+            android:text="@string/tasker_reach_your_destination"
+            android:textColor="#A9A9A9"
+            android:textSize="15sp"
+            android:textStyle="normal" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

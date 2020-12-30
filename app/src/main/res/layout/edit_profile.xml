@@ -1,0 +1,887 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:id="@+id/layout_payment_otp_header"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/app_color">
+
+            <RelativeLayout
+                android:id="@+id/layout_editprofile_header"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/colour_white">
+
+                <RelativeLayout
+                    android:id="@+id/layout_editprofile_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/back_editprofile"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="15dp"
+                        android:background="@drawable/back_arrow_long"
+                        android:backgroundTint="@color/black" />
+                </RelativeLayout>
+
+                <core.Widgets.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/editprofile_header_label"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <View
+            android:id="@+id/aboutus_toolbar_shadow_layout"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_below="@+id/layout_payment_otp_header"
+            android:background="@xml/toolbar_shadow" />
+
+
+        <ScrollView
+            android:id="@+id/editprofile_scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/aboutus_toolbar_shadow_layout"
+            android:fillViewport="true">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f2f2f2">
+
+                <RelativeLayout
+                    android:id="@+id/edit_profile_img_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_alignParentTop="true"
+                    android:background="#e6e6e6">
+
+                    <core.Widgets.CircularImageView
+                        android:id="@+id/profileimg"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/nouserimg" />
+
+
+                    <ImageButton
+                        android:id="@+id/edit_profile_IMGBTN_add"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_toEndOf="@+id/profileimg"
+                        android:background="@drawable/icon_profile_add" />
+
+                    <RelativeLayout
+                        android:id="@+id/layout_edit_profileimg"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toEndOf="@+id/profileimg"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            android:id="@+id/editimg"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:srcCompat="@drawable/edit" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/edit_email_profile_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edit_profile_img_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#ffffff">
+
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/editprofile_edit_emialTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:padding="9dp"
+                        android:text="@string/editprofile_email_label"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/editprofile_edit_email_Et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editprofile_edit_emialTv"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/edittext_background_border"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="start"
+                        android:imeOptions="actionNext"
+                        android:inputType="textMultiLine"
+                        android:textColor="#000000"
+                        android:textColorHint="#4f4f4f"
+                        android:textSize="14sp"
+                        android:typeface="sans" />
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/email_Update_Tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/editprofile_edit_email_Et"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/editprofile_update_label"
+                        android:textColor="#cc0000"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/dummyemailTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/email_Update_Tv"
+                        android:text="dfvdsc"
+                        android:textColor="#cc0000"
+                        android:textSize="14sp"
+                        android:visibility="invisible" />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/edit_bio_profile_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edit_email_profile_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#ffffff"
+                    android:visibility="gone">
+
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/editprofile_edit_bio_Tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="6dp"
+                        android:text="@string/editprofile_bio_label"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/editprofile_edit_bio_Et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editprofile_edit_bio_Tv"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/edittext_background_border"
+                        android:ems="10"
+                        android:imeOptions="actionNext"
+                        android:inputType="textMultiLine"
+                        android:textColor="#000000"
+                        android:textColorHint="#4f4f4f"
+                        android:textSize="14sp"
+                        android:typeface="sans" />
+
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/bio_Update_Tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/editprofile_edit_bio_Et"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/editprofile_update_label"
+                        android:textColor="#cc0000"
+                        android:textSize="14sp" />
+
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/dummybio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/bio_Update_Tv"
+                        android:text="dfvdsc"
+                        android:textColor="#cc0000"
+                        android:textSize="14sp"
+                        android:visibility="invisible" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/edit_username_profile_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edit_bio_profile_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#ffffff">
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/editprofile_edit_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:paddingStart="9dp"
+                        android:text="@string/registerpagefirst_activity_first_name"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+
+
+                    <EditText
+                        android:id="@+id/editprofile_edit_name_Et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editprofile_edit_name"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/edittext_background_border"
+                        android:gravity="start"
+                        android:hint="@string/registerpagefirst_activity_first_name"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:textColor="#000000"
+                        android:textColorHint="#4f4f4f"
+                        android:textSize="14sp"
+                        android:typeface="sans" />
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/editprofile_edit_lastnameTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/editprofile_edit_name_Et"
+                        android:paddingStart="9dp"
+                        android:text="@string/registerpagefirst_activity_last_name"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/editprofile_edit_lastname_Et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editprofile_edit_lastnameTitle"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/edittext_background_border"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:gravity="start"
+                        android:hint="@string/registerpagefirst_activity_last_name"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:textColor="#000000"
+                        android:textColorHint="#4f4f4f"
+                        android:textSize="14sp"
+                        android:typeface="sans" />
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/name_Update_Tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/editprofile_edit_lastname_Et"
+                        android:clickable="true"
+                        android:padding="11dp"
+                        android:text="@string/editprofile_update_label"
+                        android:textColor="#cc0000"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/edit_mobileno_profile_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edit_username_profile_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#ffffff"
+                    android:visibility="visible">
+
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/editprofile_edit_mobilenoTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:padding="9dp"
+                        android:text="@string/editprofile_mobileno_label"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/editprofile_edit_countrycode_mobileno_Et"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editprofile_edit_mobilenoTv"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/edittext_background_border"
+                        android:ems="10"
+                        android:focusableInTouchMode="false"
+                        android:gravity="start"
+                        android:hint="@string/editprofile_country_label"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:textColor="#000000"
+                        android:textColorHint="#4f4f4f"
+                        android:textSize="14sp"
+                        android:typeface="sans" />
+
+                    <EditText
+                        android:id="@+id/editprofile_edit_mobileno_Et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editprofile_edit_mobilenoTv"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@+id/editprofile_edit_countrycode_mobileno_Et"
+                        android:background="@drawable/edittext_background_border"
+                        android:ems="10"
+                        android:gravity="start"
+                        android:hint="@string/editprofile_mobilno_label"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="15"
+                        android:textColor="#000000"
+                        android:textColorHint="#4f4f4f"
+                        android:textSize="14sp"
+                        android:typeface="sans" />
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/mobilno_Update_Tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/editprofile_edit_mobileno_Et"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="25dp"
+                        android:text="@string/editprofile_update_label"
+                        android:textColor="#cc0000"
+                        android:textSize="14sp" />
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/dummy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/mobilno_Update_Tv"
+                        android:text="dfvdsc"
+                        android:textColor="#cc0000"
+                        android:textSize="14sp"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/edit_worklocation_profile_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edit_mobileno_profile_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#ffffff"
+                    android:visibility="visible">
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/editprofile_edit_worklocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:padding="9dp"
+                        android:text="@string/editprofile_work_location_label"
+                        android:textColor="#000000"
+
+                        android:textSize="15sp" />
+
+                    <com.widget.CustomTextView
+                        android:id="@+id/editprofile_edit_worklocation_TXT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editprofile_edit_worklocation"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/edittext_background_border"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="start"
+                        android:hint="@string/editprofile_work_location_label"
+                        android:imeOptions="actionNext"
+                        android:inputType="textMultiLine"
+                        android:textColor="#000000"
+                        android:textColorHint="#4f4f4f"
+                        android:textSize="14sp"
+                        android:typeface="sans" />
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/worklocation_Update_Tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/editprofile_edit_worklocation_TXT"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="11dp"
+                        android:text="@string/editprofile_update_label"
+                        android:textColor="#cc0000"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/edit_radius_profile_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edit_worklocation_profile_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#ffffff"
+                    android:visibility="gone">
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/editprofile_edit_radius"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:padding="9dp"
+                        android:text="@string/editprofile_radius_label"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/editprofile_edit_radius_Et_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/editprofile_edit_radius"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/edittext_background_border"
+                        android:visibility="gone">
+
+                        <EditText
+                            android:id="@+id/editprofile_edit_radius_Et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toStartOf="@+id/unit"
+                            android:background="@null"
+                            android:ems="10"
+                            android:gravity="start"
+                            android:hint="@string/editprofile_radius_label"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:textColor="#000000"
+                            android:textColorHint="#4f4f4f"
+                            android:textSize="14sp"
+                            android:typeface="sans" />
+
+                        <com.widget.CustomTextView
+                            android:id="@+id/unit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:text="MI"
+                            android:textColor="#4f4f4f" />
+                    </RelativeLayout>
+
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/radius_Update_Tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/editprofile_edit_radius_Et_layout"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="11dp"
+                        android:text="@string/editprofile_update_label"
+                        android:textColor="#cc0000"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/edit_address_profile_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edit_radius_profile_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#ffffff"
+                    android:visibility="gone">
+
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/address_Tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:padding="9dp"
+                        android:text="@string/editprofile_address_label"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/book_address_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/address_Tv"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_background_border"
+                        android:gravity="start">
+
+                        <EditText
+                            android:id="@+id/editprofile_edit_address_addresss_Et"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/editprofile_address_label"
+                            android:imeOptions="actionNext"
+                            android:textColor="#000000"
+                            android:textColorHint="#4f4f4f"
+                            android:textSize="14sp"
+                            android:typeface="sans" />
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/editprofile_edit_city_addresss_Et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/book_address_layout"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_background_border"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="start"
+                        android:hint="@string/edit_profile_city"
+                        android:imeOptions="actionNext"
+                        android:inputType="textMultiLine"
+                        android:textColor="#000000"
+                        android:textColorHint="#4f4f4f"
+                        android:textSize="14sp"
+                        android:typeface="sans" />
+
+
+                    <EditText
+                        android:id="@+id/editprofile_edit_state_addresss_Et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editprofile_edit_city_addresss_Et"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_background_border"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="start"
+                        android:hint="@string/edit_profile_state"
+                        android:imeOptions="actionNext"
+                        android:inputType="textMultiLine"
+                        android:textColor="#000000"
+                        android:textColorHint="#4f4f4f"
+                        android:textSize="14sp"
+                        android:typeface="sans"
+                        tools:ignore="RtlHardcoded" />
+
+
+                    <EditText
+                        android:id="@+id/editprofile_edit_country_addresss_Et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editprofile_edit_state_addresss_Et"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_background_border"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="start"
+                        android:hint="@string/edit_profile_country"
+                        android:imeOptions="actionNext"
+                        android:inputType="textMultiLine"
+                        android:textColor="#000000"
+                        android:textColorHint="#4f4f4f"
+                        android:textSize="14sp"
+                        android:typeface="sans"
+                        tools:ignore="RtlHardcoded" />
+
+
+                    <EditText
+                        android:id="@+id/editprofile_edit_postalcode_addresss_Et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/editprofile_edit_country_addresss_Et"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_background_border"
+                        android:ems="10"
+                        android:gravity="start"
+                        android:hint="@string/edit_profile_postalcode"
+                        android:imeOptions="actionNext"
+                        android:inputType="textMultiLine"
+                        android:textColor="#000000"
+                        android:textColorHint="#4f4f4f"
+                        android:textSize="14sp"
+                        android:typeface="sans"
+                        tools:ignore="RtlHardcoded" />
+
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/address_Update_Tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/editprofile_edit_postalcode_addresss_Et"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="25dp"
+                        android:text="@string/editprofile_update_label"
+                        android:textColor="#cc0000"
+                        android:textSize="14sp" />
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/dummyadress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/address_Update_Tv"
+                        android:textColor="#cc0000"
+                        android:textSize="14sp"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/avail_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/edit_address_profile_layout"
+                    android:visibility="visible">
+
+                    <com.widget.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/availability_title_with_colon"
+                        android:textColor="#000"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/avail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/avail_header"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#ffffff">
+
+                    <RelativeLayout
+                        android:id="@+id/listview_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ListView
+                            android:id="@+id/avail_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:divider="#FFFFFF"
+                            android:visibility="gone" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/myProfileAvailabilityRV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:nestedScrollingEnabled="true" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/listview_layout"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="visible">
+
+                        <core.Widgets.CustomTextView
+                            android:id="@+id/availability_update"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginTop="25dp"
+                            android:text="@string/editprofile_update_label"
+                            android:textColor="#cc0000"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/categoryEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/avail"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#ffffff">
+
+                    <core.Widgets.CustomTextView
+                        android:id="@+id/editprofile_edit_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:padding="9dp"
+                        android:text="@string/edit_profile_category_txt"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:id="@+id/add_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_toStartOf="@+id/editprofile_edit_category">
+
+                        <core.Widgets.CustomTextView
+                            android:id="@+id/category_editLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:padding="9dp"
+                            android:text="@string/editprofile_edit_label"
+                            android:textColor="#cc0000"
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/category_listview_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/editprofile_edit_category">
+
+                        <ListView
+                            android:id="@+id/saved_category_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:divider="#FFFFFF" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/categoryEdit">
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+</RelativeLayout>

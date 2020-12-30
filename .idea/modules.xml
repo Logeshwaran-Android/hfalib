@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/HoperLady.iml" filepath="$PROJECT_DIR$/HoperLady.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Connection/HoperLady.Connection.iml" filepath="$PROJECT_DIR$/.idea/modules/Connection/HoperLady.Connection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CountryCodePicker/HoperLady.CountryCodePicker.iml" filepath="$PROJECT_DIR$/.idea/modules/CountryCodePicker/HoperLady.CountryCodePicker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RippleLibrary/HoperLady.RippleLibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/RippleLibrary/HoperLady.RippleLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/HoperLady.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/HoperLady.app.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hoperlady.app.NewLoginOTPActivity">
+
+    <RelativeLayout
+        android:id="@+id/headerBackRl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/headerBackIv"
+            android:layout_width="@dimen/_37sdp"
+            android:layout_height="@dimen/_37sdp"
+            android:layout_marginStart="@dimen/pie_chart_text2_size"
+            android:layout_marginTop="@dimen/pie_chart_text2_size"
+            android:background="@drawable/merge_two_images_bg" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headerBackRl"
+        android:layout_margin="15dp"
+        android:orientation="vertical">
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/titleOTPDigitTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_16sdp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/editTextLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <core.Widgets.CustomEdittext
+                    android:id="@+id/editTextOTP1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/edittext_otp_bg"
+                    android:digits="1234567890"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:text="" />
+
+                <core.Widgets.CustomEdittext
+                    android:id="@+id/editTextOTP2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/edittext_otp_bg"
+                    android:digits="1234567890"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:text="" />
+
+                <core.Widgets.CustomEdittext
+                    android:id="@+id/editTextOTP3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/edittext_otp_bg"
+                    android:digits="1234567890"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:text="" />
+
+                <core.Widgets.CustomEdittext
+                    android:id="@+id/editTextOTP4"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/edittext_otp_bg"
+                    android:digits="1234567890"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:text="" />
+
+                <core.Widgets.CustomEdittext
+                    android:id="@+id/editTextOTP5"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/edittext_otp_bg"
+                    android:digits="1234567890"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:text="" />
+
+                <core.Widgets.CustomEdittext
+                    android:id="@+id/editTextOTP6"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/edittext_otp_bg"
+                    android:digits="1234567890"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/otpViewRL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTextLL"
+                android:gravity="center"
+                android:layout_marginTop="15dp"
+                android:visibility="visible">
+
+                <com.hoperlady.Utils.Pinview
+                    android:id="@+id/otpViewET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black" />
+
+            </RelativeLayout>
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/focuse_Tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/otpViewRL"
+                android:layout_marginTop="15dp"
+                android:gravity="end"
+                android:text="@string/newloginotp_activity_otp_invalid_alert"
+                android:textColor="#ea0303"
+                android:visibility="gone" />
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/resendOTP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/focuse_Tv"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="15dp"
+                android:text="@string/newloginotp_activity_resend_code_txt"
+                android:textColor="@color/resend_code_color" />
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/editMobileNumberTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/resendOTP"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="15dp"
+                android:text="@string/newloginotp_activity_edit_mobile_number_txt"
+                android:textColor="@color/resend_code_color"
+                android:visibility="gone" />
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/otpSentSuccessTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/resendOTP"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:gravity="center"
+                android:textColor="#0a9c19"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dp"
+        android:fitsSystemWindows="true">
+
+        <ImageView
+            android:id="@+id/headerSubmitIv"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/merge_two_images_bg"
+            android:rotation="180" />
+
+        <ProgressBar
+            android:id="@+id/progressBarRunning"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="@dimen/_65sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="10dp"
+            android:indeterminateDrawable="@drawable/progress_bar_circle_bg"
+            android:progressTint="@color/caldroid_gray"
+            android:rotation="180"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

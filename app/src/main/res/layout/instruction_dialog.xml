@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_curve_background_blue"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp">
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+            <com.widget.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/appmain_color"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="@string/instruction_text"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+        <View
+            android:id="@+id/add_address_view1"
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/header"
+            android:layout_marginTop="1px"
+            android:background="#9b9b9b"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+        <com.widget.CustomTextView
+            android:id="@+id/instruction_dialog_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/add_address_view1"
+            android:layout_marginTop="20dp"
+            android:textSize="15sp"
+            android:textColor="#838383"
+            android:text=""
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="10dp"/>
+
+        <RelativeLayout
+            android:id="@+id/cancel_lay"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/instruction_dialog_text"
+            android:background="@drawable/instruction_back"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="8dp"
+            >
+            <com.widget.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:textSize="17sp"
+                android:textColor="#FFFFFF"
+                android:text="@string/cancel"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp">
+
+            <core.Widgets.CustomEdittext
+                android:id="@+id/toolNameET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_50sdp"
+                android:background="@null"
+                android:focusable="true"
+                android:hint="@string/add_layout_fields_TXT_tool_name"
+                android:imeOptions="actionNext"
+                android:textColor="@color/black_color"
+                android:textColorHint="@color/black_color"
+                android:textSize="15dp" />
+
+            <core.Widgets.CustomTextViewBold
+                android:id="@+id/deleteMeterialTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="@string/material_add_dailog_text_delete"
+                android:textColor="@color/appmain_color"
+                android:textSize="15dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/toolCurrencySymbolTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="$"
+                android:textColorHint="@color/black_color"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/toolCostET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/add_layout_fields_TXT_tool_cost"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:paddingStart="@dimen/_5sdp"
+                android:singleLine="true"
+                android:textColor="@color/black_color"
+                android:textColorHint="@color/black_color"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:background="@color/gray" />
+
+    </LinearLayout>
+
+</RelativeLayout>

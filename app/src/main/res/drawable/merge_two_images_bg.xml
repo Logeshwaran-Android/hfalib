@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:bottom="0dp"
+        android:drawable="@drawable/circle_background"
+        android:left="0px"
+        android:right="0px"
+        android:top="0px" />
+    <item
+        android:bottom="10dp"
+        android:drawable="@drawable/back_arrow"
+        android:left="10dp"
+        android:right="10dp"
+        android:top="10dp" />
+    <!--<item android:drawable="@drawable/btn_right" android:right="0px" />-->
+</layer-list>

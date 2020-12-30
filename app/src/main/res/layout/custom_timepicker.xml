@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:gravity="center">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/handy_register_customlayout_timepickertitlebar_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        card_view:cardElevation="10dp">
+
+        <LinearLayout
+            android:id="@+id/handy_register_customlayout_timepickertitlebar_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/appmain_color"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/handy_register_customlayout_timepickertitlebar_txtview_hint_register"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="3"
+                android:gravity="start"
+                android:paddingStart="20dp"
+                android:text="Day"
+                android:textColor="@color/white"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/ll_btn_cancel"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    card_view:srcCompat="@drawable/btn_cancel"
+                    android:tint="@color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/handy_register_customlayout_timepickertitlebar_cardview"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp">
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/handy_register_customlayout_timepickertxtview_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="@string/register_customxml_timepicker_title"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/handy_register_customlayout_timepickertxtview_linearlayout_01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/handy_register_customlayout_timepickertxtview_title"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/handy_register_customlayout_timepicker_edttxt_from"
+                style="@style/Base.Widget.AppCompat.Button.Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="2"
+                android:background="@drawable/edittext_background_border"
+                android:hint="@string/register_customxml_timepicker_from"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey_text"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/handy_register_customlayout_timepicker_edttxt_to"
+                style="@style/Base.Widget.AppCompat.Button.Small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="2"
+                android:background="@drawable/edittext_background_border"
+                android:hint="@string/register_customxml_timepicker_to"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey_text"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/handy_register_service_availability_button_continue"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_below="@+id/handy_register_customlayout_timepickertxtview_linearlayout_01"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/handy_btn_background_submit_oval"
+            android:gravity="center"
+            android:text="@string/register_customxml_timepicker_btn_submit"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

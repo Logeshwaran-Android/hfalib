@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:id="@+id/waiting_actionbar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:background="@color/colour_white">
+
+        <RelativeLayout
+            android:id="@+id/waiting_back_layout"
+            android:layout_width="55dp"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:background="@null"
+                app:srcCompat="@drawable/back_arrow_black" />
+
+        </RelativeLayout>
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/waiting_TXT_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            android:text="@string/watting_PaymentRequest"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/aboutus_toolbar_shadow_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/waiting_actionbar_layout"
+        android:background="@xml/toolbar_shadow" />
+
+    <com.widget.CustomTextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/aboutus_toolbar_shadow_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="@string/PleaseWait"
+        android:textSize="20dp" />
+
+    <com.widget.CustomTextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="@string/PaymentRequest"
+        android:textSize="15dp"
+
+        />
+
+
+    <!--<ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_centerInParent="true"
+        android:layout_weight="0.75"
+        android:src="@drawable/loader" />-->
+    <ProgressBar
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_weight="0.75"
+        android:indeterminate="true" />
+
+    <com.widget.CustomTextView
+        android:id="@+id/text3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView9"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+        android:text="@string/bepatient"
+        android:textSize="15dp"
+
+        />
+
+
+    <Button
+        android:id="@+id/checkstatus"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/app_color"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/checkstatus"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "563875883051",
+    "firebase_url": "https://hoper-lady.firebaseio.com",
+    "project_id": "hoper-lady",
+    "storage_bucket": "hoper-lady.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563875883051:android:d08448904107ba77",
+        "android_client_info": {
+          "package_name": "com.hoperlady"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "563875883051-k7m1tjoiu1g179597b4tk61birgrurf9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuh9QmMPXKJoP5_JsfCEqdoNrCf-tDt_I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "563875883051-k7m1tjoiu1g179597b4tk61birgrurf9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

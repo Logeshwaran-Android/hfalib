@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout_top_cancelheader"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/colour_white">
+
+        <RelativeLayout
+            android:id="@+id/layout_cancel_back"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/back_ongoingback"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                app:srcCompat="@drawable/back_arrow_black" />
+
+        </RelativeLayout>
+
+        <core.Widgets.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/home_cancelreason_header_label"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/aboutus_toolbar_shadow_layout"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/layout_top_cancelheader"
+        android:background="@xml/toolbar_shadow" />
+
+    <ListView
+        android:id="@+id/cancelreason_listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/aboutus_toolbar_shadow_layout"
+        android:divider="@null"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/edit_tv_Rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cancelreason_listView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="20dp"
+        android:background="#e1e1e1">
+
+        <core.Widgets.CustomTextView
+            android:id="@+id/cancel_job_reason_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/other_cancel_reson"
+            android:textColor="#8e8e8e"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+    <com.widget.CustomTextView
+        android:id="@+id/emtpy_cancelreason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/cancelreason_listView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="@string/cancel_reasonlabel"
+        android:textColor="#000000"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.hoperlady">
+
+    <permission
+        android:name="com.example.com.locationmap.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <permission
+        android:name="${applicationId}.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="${applicationId}.permission.C2D_MESSAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" /> <!-- Camera Permission -->
+
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
+    <application
+        android:name="core.Volley.AppController"
+        android:allowBackup="true"
+        android:icon="@drawable/handyexpertslogo"
+        android:label="${appLabel}"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:label">
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name="com.hoperlady.app.Splashpage"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Goolge API Key -->
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDHiVrmDS92MbElhIKE5SD05zsCfjqyku0" />
+
+        <activity android:name="net.hockeyapp.android.UpdateActivity" />
+
+        <service android:name="com.hoperlady.Utils.SocketCheckService" />
+        <service android:name="core.socket.TaskerTrackRideServiceClass" />
+
+        <activity
+            android:name="com.hoperlady.app.MainPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.hoperlady.app.LoginPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.hoperladyegisterPageWebview"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.hoperlady.app.NavigationDrawer"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.hoperlady.app.MyJobs"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialThemeTab"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.hoperlady.app.AboutUs"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialThemeTab"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.hoperlady.app.ProfilePage"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.hoperlady.app.LoadingPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.hoperlady.app.BankDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.hoperlady.app.GetMessageChatActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.hoperlady.app.MyJobs_OnGoingDetailPage"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.hoperlady.app.NewLeadsPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.hoperlady.app.LocationSearch"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperlady.app.WorkLocationEditSearch"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperlady.app.Cancel_Job_Reason"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.hoperlady.app.PaymentFareSummery"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.hoperlady.app.ChatPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.hoperlady.app.StatisticsPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.hoperlady.app.ReceiveCashPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.hoperlady.app.ReviwesPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.hoperlady.app.OtpPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.hoperlady.app.SupportPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.hoperlady.app.MoreInfoPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.hoperlady.app.Job_WorkFlow"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.hoperlady.app.EditProfilePage"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.hoperlady.app.ForgotPassword"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.hoperlady.app.ChangePassword"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.hoperlady.app.ConversationPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.hoperlady.app.RequestPaymnet_LoadingPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.hoperlady.app.ChatList"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.hoperlady.app.RegisterPageFirst"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.hoperlady.app.RegisterPageSecond"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.hoperlady.app.RegisterPageThird"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.hoperlady.app.RegistrationSuccessPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.hoperlady.app.RegisterPageFourth"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.hoperlady.app.MyNewWebView"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="core.Xmpp.Xmpp_PushNotificationPage"
+            android:launchMode="singleTask"
+            android:screenOrientation="unspecified"
+            android:theme="@style/PushNotificaton_NoActionBar_Transparent_Theme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <service
+            android:name="core.gcm.GCMNotificationIntentService"
+            android:enabled="true"
+            android:exported="true" />
+        <service android:name="core.socket.ChatMessageService" />
+
+        <receiver
+            android:name="com.hoperlady.Utils.RestartService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="restartApps" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.ACTION_EXTERNAL_APPLICATIONS_AVAILABLE" />
+            </intent-filter>
+        </receiver> <!-- <receiver -->
+        <!-- android:name="com.quickrabbitpartner.GcmBroadcastReceiver" -->
+        <!-- android:permission="com.google.android.c2dm.permission.SEND"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.android.c2dm.intent.RECEIVE" /> -->
+        <!-- <action android:name="com.google.android.c2dm.intent.REGISTRATION" /> -->
+        <!-- <action android:name="android.intent.action.BOOT_COMPLETED" /> -->
+        <!-- <action android:name="android.intent.action.ACTION_EXTERNAL_APPLICATIONS_AVAILABLE" /> -->
+        <!-- <category android:name="com.Jinzzypartner" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <!-- Firebase Notifications -->
+        <service android:name="com.hoperlady.FCM.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.hoperlady.FCM.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service> <!-- ./Firebase Notifications -->
+        <service
+            android:name="com.hoperlady.Utils.IdentifyAppKilled"
+            android:enabled="true"
+            android:exported="true" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.hoperlady.app.MainpageWebview"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.hoperlady.app.ShowWebView"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.hoperlady.app.Reviewimageviewclass"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.hoperlady.app.TransactionMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.hoperlady.app.TransactionDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.hoperlady.app.ReviewMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.hoperlady.app.NotificationMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.hoperlady.app.TrackYourRide"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.hoperlady.app.EditCategoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name="com.hoperlady.hockeyapp.ActivityHockeyApp" />
+        <activity android:name="com.hoperlady.app.RegisterPageThirdNew" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name="com.hoperlady.app.NewLoginHomePageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.hoperlady.app.NewLoginHomePageSecondActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeOTP"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustResize" />
+        <activity
+            android:name="com.hoperlady.app.NewLoginOTPActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustResize" />
+        <activity
+            android:name="com.hoperlady.app.RegiterPageAvailablilityActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.hoperlady.app.MyTaskDetails"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.hoperlady.app.MyProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.hoperlady.app.RatingSmilyPage"
+            android:launchMode="singleTask"
+            android:screenOrientation="unspecified"
+            android:theme="@style/PushNotificaton_NoActionBar_Transparent_Theme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.hoperlady.app.DayTaskActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="unspecified"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.hoperlady.app.WeeklyTaskActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="unspecified"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.hoperlady.app.WeekTaskBarChartActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="unspecified"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.hoperlady.app.Map_Location_Search"
+            android:launchMode="singleTask"
+            android:screenOrientation="unspecified"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustResize" />
+        <activity
+            android:name="com.hoperlady.app.RegisterLicenceUploadActivity"
+            android:screenOrientation="unspecified"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.hoperlady.app.GetDocuments"
+            android:screenOrientation="unspecified"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+
+        <activity
+            android:name="com.hoperlady.app.map.MapUser"
+            android:screenOrientation="unspecified"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="9c969f3fd079cafb8f2f9f5273f0fb659ba42fc1" />
+    </application>
+
+</manifest>

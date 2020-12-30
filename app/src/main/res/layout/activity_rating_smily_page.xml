@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/book_cardView_current_location_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        card_view:cardBackgroundColor="#ffffff"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/closeIV"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/cross_icon" />
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/titltDescriptionTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:gravity="center"
+                android:text="@string/ratingsmileypage_title_text"
+                android:textColor="@color/red_color"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/smileyFullIV"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_below="@+id/titltDescriptionTV"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_45sdp"
+                android:background="@drawable/smiley_greate_yellow" />
+
+            <core.Widgets.CustomTextView
+                android:id="@+id/ratingNameTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/smileyFullIV"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="@string/ratingsmileypage_great"
+                android:textColor="@color/appmain_color_dark"
+                android:textSize="@dimen/_18sdp" />
+
+            <LinearLayout
+                android:id="@+id/smileyLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ratingNameTV"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/smileyTerrible"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:background="@drawable/smiley_terrible_yellow" />
+
+                <ImageView
+                    android:id="@+id/smileyBad"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:background="@drawable/smiley_bad_yellow" />
+
+                <ImageView
+                    android:id="@+id/smileyOkey"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:background="@drawable/smiley_okey_yellow" />
+
+                <ImageView
+                    android:id="@+id/smileyGood"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:background="@drawable/smiley_good_yellow" />
+
+                <ImageView
+                    android:id="@+id/smileyGreate"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="@drawable/smiley_greate_yellow" />
+            </LinearLayout>
+
+            <View
+                android:visibility="gone"
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/smileyLL"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@color/gray" />
+
+            <core.Widgets.CustomEdittext
+                android:id="@+id/commentsET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="@string/ratingsmileypage_comments_text"
+                android:maxLength="200"
+                android:text=""
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black_color" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <core.Widgets.CustomButtonViewBold
+        android:id="@+id/submitBTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/book_cardView_current_location_layout"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/accept_curve"
+        android:text="@string/action_complete_submit"
+        android:textColor="@color/white" />
+</RelativeLayout>
